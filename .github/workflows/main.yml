@@ -5,17 +5,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install Compiler
         run: sudo apt-get update && sudo apt-get install -y gcc-avr avr-libc
       - name: Compile
         run: |
-          chmod +x build-all.sh
-          ./build-all.sh
+          # This makes the build script executable and runs it
+          chmod +x Build.sh || chmod +x build-all.sh
+          ./Build.sh || ./build-all.sh
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: anduril-hex-files
-          path: "*.hex"
-
+          path: "**/*.hex"
           
