@@ -46,27 +46,15 @@ jobs:
       run: |
         ./make dfp
 
-    - name: Build SP36 T1616
+    - name: Compile All
       run: |
-          make sofirn-sp36-t1616
+        ./make
+        echo "ARTIFACT_NAME=${GITHUB_WORKFLOW}-$(git rev-parse --short ${GITHUB_SHA})-${GITHUB_RUN_NUMBER}" >> "${GITHUB_ENV}"
 
-    - name: Upload firmware
-      uses: actions/upload-artifact@v3
-      with:
-          name: sp36-t1616-firmware
-          path: hex/anduril.sofirn-sp36-t1616.hex
-          
     - name: Store Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: ${{sp36-t1616-firmware}}
-        if-no-files-found: actions/upload-artifact@v3
+        name: ${{ env.ARTIFACT_NAME }}
+        if-no-files-found: error
         path: |
           hex/*.hex
-
-          name: Build SP36 T1616
-        run: |
-          make sofirn-sp36-t1616
-
-   
-          
