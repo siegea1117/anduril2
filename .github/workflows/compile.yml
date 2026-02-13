@@ -48,7 +48,8 @@ jobs:
 
     - name: Compile All
       run: |
-        ./make
+       make sofirn-sp36-t1616
+        //./make
         echo "ARTIFACT_NAME=${GITHUB_WORKFLOW}-$(git rev-parse --short ${GITHUB_SHA})-${GITHUB_RUN_NUMBER}" >> "${GITHUB_ENV}"
 
     - name: Store Artifacts
