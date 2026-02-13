@@ -1,15 +1,14 @@
 name: build all
 
 on:
-  # all branches:
-  [ push, pull_request, workflow_dispatch ]
-  # trunk only:
-  #push:
-  #  branches: [ "trunk" ]
-  #pull_request:
-  #  branches: [ "trunk" ]
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
   compile:
     runs-on: ubuntu-latest
 
