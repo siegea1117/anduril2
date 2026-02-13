@@ -1,9 +1,6 @@
-// Medieval Torch Mode - Full Simulation Engine
-
-// everything in this file stays exactly the same
-
-
 #ifdef USE_MEDIEVAL_TORCH_MODE
+
+void medieval_torch_iter(void);
 
 static uint8_t base_level;
 static uint8_t aggression = 40;
