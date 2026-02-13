@@ -1,5 +1,12 @@
 // Medieval Torch Mode – Full Simulation Engine
 
+#include "anduril.h"
+
+#if defined(USE_MEDIEVAL_TORCH_MODE) && defined(MODEL_SOFIRN_SP36)
+
+// everything in this file stays exactly the same
+
+
 #ifdef USE_MEDIEVAL_TORCH_MODE
 
 static uint8_t base_level;
