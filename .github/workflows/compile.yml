@@ -21,8 +21,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y avr-libc binutils-avr gcc-avr unzip wget
 
-      - name: Compile
-        run: make
+      - name: Compile SP36
+        run: make sofirn-sp36-t1616
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
