@@ -44,7 +44,7 @@ uint8_t medieval_torch_state(Event event, uint16_t arg)
     return EVENT_NOT_HANDLED;
 }
 
-void medieval_torch_iter(void)
+//void medieval_torch_iter(void)
 {
     int16_t brightness = base_level;
 
