@@ -2,6 +2,8 @@
 
 #include "anduril.h"
 
+void medieval_torch_iter(void);
+
 #if defined(USE_MEDIEVAL_TORCH_MODE) && defined(MODEL_SOFIRN_SP36)
 
 // everything in this file stays exactly the same
