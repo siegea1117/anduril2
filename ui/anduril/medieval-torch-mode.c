@@ -1,7 +1,5 @@
 // Medieval Torch Mode – Full Simulation Engine
 
-#include "anduril.h"
-
 #ifdef USE_MEDIEVAL_TORCH_MODE
 
 static uint8_t base_level;
