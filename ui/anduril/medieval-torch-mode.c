@@ -1,7 +1,5 @@
 // Medieval Torch Mode - Full Simulation Engine
 
-#if defined(USE_MEDIEVAL_TORCH_MODE) && defined(MODEL_SOFIRN_SP36)
-
 // everything in this file stays exactly the same
 
 
