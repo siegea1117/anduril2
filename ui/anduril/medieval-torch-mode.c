@@ -1,8 +1,4 @@
-// Medieval Torch Mode – Full Simulation Engine
-
-#include "anduril.h"
-
-void medieval_torch_iter(void);
+// Medieval Torch Mode - Full Simulation Engine
 
 #if defined(USE_MEDIEVAL_TORCH_MODE) && defined(MODEL_SOFIRN_SP36)
 
