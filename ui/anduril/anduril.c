@@ -113,6 +113,10 @@
 #include "anduril/beacon-mode.h"
 #endif
 
+#ifdef USE_MEDIEVAL_TORCH_MODE
+#include "anduril/medieval-torch-mode.c"
+#endif
+
 #ifdef USE_THERMAL_REGULATION
 #include "anduril/tempcheck-mode.h"
 #endif
