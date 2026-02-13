@@ -361,6 +361,15 @@ uint8_t off_state(Event event, uint16_t arg) {
     }
     #endif
 
+        #ifdef USE_MEDIEVAL_TORCH_MODE
+    // 5H: medieval torch mode
+    else if (event == EV_5clicks_hold) {
+        blink_once();
+        set_state(medieval_torch_state, 0);
+        return EVENT_HANDLED;
+    }
+    #endif
+
     #ifdef USE_GLOBALS_CONFIG
     // 9 clicks, but hold last click: configure misc global settings
     else if ((event == EV_click9_hold) && (!arg)) {
