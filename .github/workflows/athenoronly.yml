@@ -49,12 +49,13 @@ jobs:
     - name: Compile All
       run: |
         ./make
+        sp36-t1616
         echo "ARTIFACT_NAME=${GITHUB_WORKFLOW}-$(git rev-parse --short ${GITHUB_SHA})-${GITHUB_RUN_NUMBER}" >> "${GITHUB_ENV}"
 
     - name: Store Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: ${{ env.ARTIFACT_NAME }}
-        if-no-files-found:
+        if-no-files-found: error 
         path: |
           hex/*.hex
